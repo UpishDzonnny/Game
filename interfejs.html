@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clicker Game</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f0f0f0;
+        }
+        #dogImage {
+            width: 200px;
+            height: auto;
+            cursor: pointer;
+        }
+        #score {
+            font-size: 24px;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <img id="dogImage" src="e.jpg" alt="Dog">
+    <div id="score">Score: <span id="scoreCount">0</span></div>
+
+    <script>
+        // Pobieramy referencje do elementów HTML
+        const dogImage = document.getElementById("dogImage");
+        const scoreCountDisplay = document.getElementById("scoreCount");
+
+        // Licznik punktów
+        let scoreCount = 0;
+
+        // Funkcja obsługująca kliknięcie na obraz psa
+        function handleDogClick() {
+            // Zwiększamy licznik punktów po kliknięciu
+            scoreCount++;
+            // Aktualizujemy wyświetlanie liczby punktów
+            scoreCountDisplay.textContent = scoreCount;
+        }
+
+        // Dodajemy obsługę kliknięcia na obraz psa
+        dogImage.addEventListener("click", handleDogClick);
+    </script>
+</body>
+</html>

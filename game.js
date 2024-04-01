@@ -12,7 +12,7 @@ bot.onText(/\/startgame/, (msg) => {
   const chatId = msg.chat.id;
 
   // Link do gry clicker
-  const gameLink = 'C:/Users/kplaz/OneDrive/Pulpit/rede%20game/interfejs.html'; // Zastąp to linkiem do swojej gry
+  const gameLink = 'interfejs.html'; // Zastąp to linkiem do swojej gry
 
   // Wysłanie wiadomości z linkiem do gry
   bot.sendMessage(chatId, 'Witaj! Kliknij poniższy link, aby zagrać w grę clicker:\n' + gameLink);
